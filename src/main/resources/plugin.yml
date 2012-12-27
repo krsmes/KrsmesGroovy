@@ -1,0 +1,21 @@
+name: ${project.name}
+version: ${buildNumber}
+description: ${project.description}
+author: ${author}
+website: ${project.url}
+
+main: net.krsmes.bukkit.plugins.groovy.KrsmesGroovyPlugin
+load: startup
+
+commands:
+    grv:
+        aliases: [plotsPlugin, groovy]
+        description: Run a groovy code snippet.
+        #permission: krsmesGroovy.plugin.command
+        usage: |
+            Usage: /<command> groovycode
+
+permissions:
+    krsmesGroovy.plugin.command:
+        description: Allow player to run gr command
+        default: false
